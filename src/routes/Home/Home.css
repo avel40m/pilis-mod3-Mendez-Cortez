@@ -1,0 +1,48 @@
+.title {
+    text-align: center;
+    font-size: 3rem;
+    color: aliceblue;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 25px;
+}
+
+.card-body {
+    background: rgba( 0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 3.5px);
+    -webkit-backdrop-filter: blur( 3.5px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    padding: 25px;
+    max-width: 450px
+}
+
+.card-lugar {
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 46px;
+    letter-spacing: 1.2px;
+}
+
+.card-icon {
+    text-align: end;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.sin-datos {
+    margin-top: 100px;
+    text-align: center;
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

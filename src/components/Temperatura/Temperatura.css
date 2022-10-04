@@ -1,0 +1,11 @@
+.card-clima {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: azure;
+    font-size: 20px;
+}
+
+.card-clima svg {
+    font-size: 24px;
+}
