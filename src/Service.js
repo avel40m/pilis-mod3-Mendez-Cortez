@@ -15,6 +15,15 @@ export const datos = [
         temperatura: '',
         viento:'',
 
+    },
+    {
+        id:3,
+        nombre: 'Salta capital',
+        latitud: -24.7959127,
+        longitud: -65.5006695,
+        temperatura: '',
+        viento:'',
+
     }
 ]
 
