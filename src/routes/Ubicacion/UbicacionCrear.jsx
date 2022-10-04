@@ -20,6 +20,7 @@ const UbicacionCrear = () => {
       nombre: data.ubicacionName,
       latitud: data.latitud,
       longitud: data.longitud,
+      imagen: data.imagen
     }
     setUbicacion([...ubicacion,newUbicacion]);
     navigate("/")
@@ -57,6 +58,15 @@ const UbicacionCrear = () => {
           })}
         />
         <span>{errors.latitud?.message}</span>
+        <input
+          className="input-form"
+          type="text"
+          placeholder="Ingresar una URL"
+          {...register("imagen", {
+            required: "Debe URL de imagen"
+          })}
+        />
+        <span>{errors.imagen?.message}</span>
         <button type="submit">Crear Ubicacion</button>
       </form>
     </div>

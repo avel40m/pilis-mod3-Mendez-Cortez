@@ -6,7 +6,7 @@ import { TemperaturaContext } from "../../context/TemperaturaContext";
 
 const Temperatura = ({ latitud, longitud }) => {
   const {temperatura,setTemperatura} = useContext(TemperaturaContext)
-
+  
   useEffect(() => {
     getTemperature(latitud, longitud)
                   .then(data => setTemperatura(data.current_weather))

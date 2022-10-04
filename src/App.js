@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./routes/Navigation/Navigation";
 import Home from "./routes/Home/Home.jsx";
+import Details from "./routes/Details/Details";
 import UbicacionCrear from "./routes/Ubicacion/UbicacionCrear";
 import {datos} from './Service'
 import { useContext, useEffect } from "react";
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/crear" element={<UbicacionCrear />} />
+        <Route path="/ubicacion/:id" element={<Details />} />
       </Routes>
     </div>
   );
