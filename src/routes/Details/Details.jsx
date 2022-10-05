@@ -8,7 +8,6 @@ const Details = () => {
   const {ubicacion} = useContext(UbicacionContext)    
 
   const arreglo = ubicacion.filter(x => x.id === parseInt(id))
-  console.log(arreglo[0]);
 
   return (
     <div className='details'>

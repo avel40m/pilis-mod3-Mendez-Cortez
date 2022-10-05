@@ -11,6 +11,7 @@ const Temperatura = ({ latitud, longitud }) => {
     getTemperature(latitud, longitud)
                   .then(data => setTemperatura(data.current_weather))
                   .catch(err => console.error(err));
+    
   }, []);
 
   return (
