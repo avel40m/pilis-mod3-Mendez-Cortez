@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Temperatura from "../../components/Temperatura/Temperatura";
 import { UbicacionContext } from "../../context/UbicacionContext";
 import "./Home.css";
+import { getTemperature } from "../../Service";
 import { FaTimes,FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -16,7 +17,7 @@ const Home = () => {
   const NoHayDatos = () => {
     return <h1 className="sin-datos">No existe datos para mostrar</h1>;
   };
-
+  
   return (
     <>
       <h1 className="title">Listado de clima</h1>

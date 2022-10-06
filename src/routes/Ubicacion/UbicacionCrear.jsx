@@ -2,12 +2,14 @@ import React,{useContext} from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { UbicacionContext } from "../../context/UbicacionContext";
+import { UserContext } from "../../context/UserContext";
 import './UbicacionCrear.css'
 
 const UbicacionCrear = () => {
   const navigate = useNavigate();
   const {ubicacion,setUbicacion} = useContext(UbicacionContext)
-  console.log(ubicacion);
+  const {currentUser} = useContext(UserContext)
+
   const {
     register,
     handleSubmit,
@@ -25,11 +27,20 @@ const UbicacionCrear = () => {
     setUbicacion([...ubicacion,newUbicacion]);
     navigate("/")
   }
-
+  
   return (
     <div className="crear-ubicacion">
-      <p className="titulo-ubicacion">Crear Ubicacion</p>
+      {
+        (currentUser === null) ?
+        <div className="not-permission">
+        <h1>403</h1>
+        <p>Forbbiden</p>
+        <span>El acceso fue denegado</span>
+        </div>
+        :
+        
       <form className="ubicacion-form" onSubmit={handleSubmit(onSubmit)}>
+        <p className="titulo-ubicacion">Crear Ubicacion</p>
         <input
           className="input-form"
           type="text"
@@ -69,6 +80,7 @@ const UbicacionCrear = () => {
         <span>{errors.imagen?.message}</span>
         <button type="submit">Crear Ubicacion</button>
       </form>
+      }
     </div>
   );
 };

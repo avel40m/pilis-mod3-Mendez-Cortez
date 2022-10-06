@@ -75,3 +75,11 @@ button:hover {
     color: green;
     cursor: pointer;
 }
+
+.not-permission {
+    color: aliceblue;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-family: cursive;
+}

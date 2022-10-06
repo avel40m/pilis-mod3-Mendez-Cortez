@@ -38,3 +38,14 @@ export const getTemperature = async (lat,log) => {
         console.error(error);
     }
 }
+
+
+export const clima = async (lat,log) => {
+    try {
+        const res = await fetch(`https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=${lat}&longitude=${log}&timezone=America/Argentina/Jujuy`)
+        .then((response) => response.json())
+        return res
+    } catch (error) {
+        throw new Error(error)
+    }
+}
