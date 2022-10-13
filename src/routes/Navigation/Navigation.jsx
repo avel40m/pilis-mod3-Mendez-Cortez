@@ -17,7 +17,7 @@ const Navigation = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="navegacion">
         <Link className="logo" to="/">
           <img src={Logo} alt="Logo web" />
@@ -25,7 +25,7 @@ const Navigation = () => {
         <div className="navegacion-link">
           {currentUser === null ? (
             <Link className="nav-link" to="/login">
-              Ingresar <FaSignInAlt />
+              Ingresar  <FaSignInAlt />
             </Link>
           ) : (
             <>
@@ -39,7 +39,7 @@ const Navigation = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

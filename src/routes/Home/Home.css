@@ -1,11 +1,12 @@
 .title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
     color: aliceblue;
     line-height: 30px;
     font-weight: 400;
     letter-spacing: 5px;
     text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .card {
@@ -27,15 +28,15 @@
 
 .card-lugar {
     font-size: 2rem;
-    color: #ffffff;
+    color: #d8d8d8;
     line-height: 46px;
     letter-spacing: 1.2px;
 }
 
 .card-icon {
     text-align: end;
-    font-size: 20px;
-    color: red;
+    font-size: 35px;
+    color: #ff1e1e;
     cursor: pointer;
 }
 
@@ -49,5 +50,10 @@
 
 .see-more {
     font-size: 22px;
-    color: aliceblue;
+    color: #182747;
+}
+
+.stilo1 {
+    font-size: 20px;
+    color: chartreuse;
 }

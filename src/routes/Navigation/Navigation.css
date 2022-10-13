@@ -17,11 +17,12 @@
 }
 
 .nav-link {
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
     font-weight: bold;
     color: aliceblue;
     transition: all 0.5s;
+    padding-right: 25px;
 }
 
 .nav-link:hover {

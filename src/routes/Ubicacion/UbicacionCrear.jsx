@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { UbicacionContext } from "../../context/UbicacionContext";
 import { UserContext } from "../../context/UserContext";
-import './UbicacionCrear.css'
+import './UbicacionCrear.css';
+import Swal from "sweetalert2";
 
 const UbicacionCrear = () => {
   const navigate = useNavigate();
@@ -17,16 +18,34 @@ const UbicacionCrear = () => {
   } = useForm({});
 
   const onSubmit = (data) => {
-    const newUbicacion = {
-      id: ubicacion.length + 1,
-      nombre: data.ubicacionName,
-      latitud: data.latitud,
-      longitud: data.longitud,
-      imagen: data.imagen
-    }
-    setUbicacion([...ubicacion,newUbicacion]);
-    navigate("/")
-  }
+    Swal.fire({
+      title: "¿Confirma la creación de la ubicación ?",
+      text: "Su registro será almacenado",
+      icon: "warning",
+      showDenyButton: true,
+      denyButtonText: "Cancelar",
+      denyButtonColor:"#5F6F94",
+      confirmButtonText: "Confirmar",
+      confirmButtonColor: "#25316D",
+    }).then((response) => {
+      if (response.isConfirmed) {
+        const newUbicacion = {
+          id: ubicacion.length + 1,
+          nombre: data.ubicacionName,
+          latitud: data.latitud,
+          longitud: data.longitud,
+          imagen: data.imagen
+        }
+        setUbicacion([...ubicacion,newUbicacion]);
+        navigate("/")
+        Swal.fire("La ubicación se ha sido creada", "Exitosamente", "success");
+      } else {
+        Swal.fire("Puede recargar datos nuevamente ...", "La ubicación no se ha guardado ", "danger");
+      }
+    });
+  };
+    
+  
   
   return (
     <div className="crear-ubicacion">
