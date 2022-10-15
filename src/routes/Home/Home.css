@@ -57,3 +57,24 @@
     font-size: 20px;
     color: chartreuse;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .title {
+        font-size: 3rem;
+    }
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* SMALL DEVICES*/
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+    .title {
+        font-size: 3rem;
+    }
+    .card {
+        grid-template-columns: 1fr;
+    }
+}

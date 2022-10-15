@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.jpg";
+import Logo from "../../assets/LogoClim.png";
 import { UserContext } from "../../context/UserContext";
 import {FaPowerOff, FaSignInAlt} from 'react-icons/fa'
 import "./Navigation.css";
@@ -19,13 +19,15 @@ const Navigation = () => {
   return (
     <div>
       <div className="navegacion">
-        <Link className="logo" to="/">
+           
+            <Link className="logo" to="/">
+          
           <img src={Logo} alt="Logo web" />
         </Link>
         <div className="navegacion-link">
           {currentUser === null ? (
             <Link className="nav-link" to="/login">
-              Ingresar  <FaSignInAlt />
+              <p>Ingresar </p> <FaSignInAlt />
             </Link>
           ) : (
             <>

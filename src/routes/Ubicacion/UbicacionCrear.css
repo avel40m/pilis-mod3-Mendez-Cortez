@@ -9,9 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 37%;
-    padding: 10px 100px;
+    margin: auto;
+    width: 300px;
+    padding: 1rem;
 }
 
 .titulo-ubicacion {
@@ -64,7 +64,7 @@ button {
     padding: 10px 5px;
     margin-bottom: 50px;
     background-color: transparent;
-    border: 3px solid green;
+    border: 3px solid chartreuse;
     font-size: 23px;
     color: aliceblue;
     transition: all 200ms;
@@ -72,7 +72,7 @@ button {
 
 button:hover {
     background-color: aliceblue;
-    color: green;
+    color: chartreuse;
     cursor: pointer;
 }
 

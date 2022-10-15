@@ -7,7 +7,7 @@
     -webkit-backdrop-filter: blur( 3.5px);
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
-    position: absolute;
-    left: 37%;
-    padding: 10px 100px;
+    margin: auto;
+    width: 300px;
+    padding: 1rem;
 }
